@@ -1,0 +1,62 @@
+PyTorch
+==================================
+seed 0
+Training completed in 636.700s
+Accuracy on training set: 69.598%
+Accuracy on test set: 63.630%
+
+seed 1
+Training completed in 600.472s
+Accuracy on training set: 70.433%
+Accuracy on test set: 63.200%
+
+seed 2
+Training completed in 606.105s
+Accuracy on training set: 72.407%
+Accuracy on test set: 65.370%
+
+seed 3
+Training completed in 560.751s
+Accuracy on training set: 71.136%
+Accuracy on test set: 64.150%
+
+seed 4
+Training completed in 545.453s
+Accuracy on training set: 72.191%
+Accuracy on test set: 64.360%
+
+Average training time: 589.896s
+Average accuracy on the training set: 71.153%
+Average accuracy on the test set: 64.142%
+
+
+TensorFlow
+=======================================
+seed 0
+Training completed in 302.997s
+Accuracy on training set: 80.602%
+Accuracy on test set: 70.120%
+
+seed 1
+Training completed in 318.020s
+Accuracy on training set: 81.794%
+Accuracy on test set: 71.010%
+
+seed 2
+Training completed in 292.007s
+Accuracy on training set: 82.356%
+Accuracy on test set: 71.450%
+
+seed 3
+Training completed in 293.546s
+Accuracy on training set: 83.916%
+Accuracy on test set: 72.040%
+
+seed 4 
+Training completed in 331.819s
+Accuracy on training set: 83.042%
+Accuracy on test set: 72.010%
+
+Average training time: 307.678s
+Average accuracy on the training set: 82.342%
+Average accuracy on the test set: 71.326%
