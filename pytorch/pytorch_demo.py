@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader, random_split
 from torch import nn
 import time
 
-torch.manual_seed(0)
+torch.manual_seed(4)
 
 # Hyperparameters
 batch_size = 32
@@ -93,7 +93,9 @@ def train_model(model, loss_fn, optimizer):
         print(f'Epoch {epoch + 1}\n-------------------------------')
         
         epoch_start_time = time.time()
-        train_loop(model, train_loader, loss_fn, optimizer)
+        model.train() # Ensure the dropout layers are in training mode
+        train_loop(model, train_loader, loss_fn, optimizer)        
+        model.eval() # Set dropout layers to evaluation mode
         val_accuracy = evaluate_model(model, validation_loader)
         epoch_elapsed_time = time.time() - epoch_start_time      
         
@@ -103,6 +105,7 @@ def train_model(model, loss_fn, optimizer):
     train_elapsed_time = time.time() - train_start_time
     print(f'Training completed in {train_elapsed_time:.3f}s')
 
+    model.eval()
     train_accuracy = evaluate_model(model, train_loader)
     print(f'Accuracy on training set: {train_accuracy:.3f}%')
     test_accuracy = evaluate_model(model, test_loader)

@@ -1,33 +1,33 @@
 PyTorch
 ==================================
 seed 0
-Training completed in 636.700s
-Accuracy on training set: 69.598%
-Accuracy on test set: 63.630%
+Training completed in 589.440s
+Accuracy on training set: 77.251%
+Accuracy on test set: 69.930%
 
 seed 1
-Training completed in 600.472s
-Accuracy on training set: 70.433%
-Accuracy on test set: 63.200%
+Training completed in 584.378s
+Accuracy on training set: 78.969%
+Accuracy on test set: 69.930%
 
 seed 2
-Training completed in 606.105s
-Accuracy on training set: 72.407%
-Accuracy on test set: 65.370%
+Training completed in 575.473s
+Accuracy on training set: 80.549%
+Accuracy on test set: 71.430%
 
 seed 3
-Training completed in 560.751s
-Accuracy on training set: 71.136%
-Accuracy on test set: 64.150%
+Training completed in 604.453s
+Accuracy on training set: 80.518%
+Accuracy on test set: 71.540%
 
 seed 4
-Training completed in 545.453s
-Accuracy on training set: 72.191%
-Accuracy on test set: 64.360%
+Training completed in 577.629s
+Accuracy on training set: 80.664%
+Accuracy on test set: 70.710%
 
-Average training time: 589.896s
-Average accuracy on the training set: 71.153%
-Average accuracy on the test set: 64.142%
+Average training time: 586.275s (± 10.35)
+Average accuracy on the training set: 79.590% (± 1.33)
+Average accuracy on the test set: 70.708% (± 0.70)
 
 
 TensorFlow
@@ -57,6 +57,18 @@ Training completed in 331.819s
 Accuracy on training set: 83.042%
 Accuracy on test set: 72.010%
 
-Average training time: 307.678s
-Average accuracy on the training set: 82.342%
-Average accuracy on the test set: 71.326%
+Average training time: 307.678s (± 15.21)
+Average accuracy on the training set: 82.342% (± 1.12)
+Average accuracy on the test set: 71.326% (± 0.71)
+
+Without Dropout
+===================================
+PyTorch (seed 0)
+Training completed in 539.248s
+Accuracy on training set: 95.978%
+Accuracy on test set: 69.180%
+
+TensorFlow (seed 0)
+Training completed in 270.492s
+Accuracy on training set: 94.120%
+Accuracy on test set: 69.350%
