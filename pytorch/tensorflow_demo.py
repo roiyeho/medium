@@ -24,18 +24,18 @@ X_test = X_test / 255.0
 
 # Build the network
 model = keras.models.Sequential([  
-    layers.Conv2D(32, 3, input_shape=[32, 32, 3], activation='relu'),
+    layers.Conv2D(32, 3, input_shape=[32, 32, 3], activation='relu', kernel_initializer='he_uniform'),
     layers.MaxPooling2D(),
     layers.Dropout(0.25),
 
-    layers.Conv2D(64, 3, activation='relu'),
+    layers.Conv2D(64, 3, activation='relu', kernel_initializer='he_uniform'),
     layers.MaxPooling2D(),
     layers.Dropout(0.25),
 
     layers.Flatten(),
-    layers.Dense(512, activation='relu'),
+    layers.Dense(512, activation='relu', kernel_initializer='he_uniform'),
     layers.Dropout(0.5),
-    layers.Dense(10, activation='softmax')
+    layers.Dense(10, activation='softmax', kernel_initializer='he_uniform')
 ])
 
 model.summary()

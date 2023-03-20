@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader, random_split
 from torch import nn
 import time
 
-torch.manual_seed(4)
+torch.manual_seed(0)
 
 # Hyperparameters
 batch_size = 32
@@ -115,4 +115,5 @@ def train_model(model, loss_fn, optimizer):
 loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
-train_model(model, loss_fn, optimizer)
+if __name__ == '__main__':
+    train_model(model, loss_fn, optimizer)
