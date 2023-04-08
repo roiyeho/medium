@@ -25,9 +25,9 @@ Training completed in 125.322s
 Accuracy on training set: 81.373%
 Accuracy on test set: 70.460%
 
-Average training time: 586.275s (± 10.35)
-Average accuracy on the training set: 79.590% (± 1.33)
-Average accuracy on the test set: 70.708% (± 0.70)
+Average training time: 119.340s (± 3.60)
+Average accuracy on the training set: 80.832% (± 0.56)
+Average accuracy on the test set: 71.216% (± 0.65)
 
 TensorFlow (using He initialization like PyTorch)
 =================================================
@@ -90,15 +90,3 @@ Accuracy on test set: 72.010%
 Average training time: 307.678s (± 15.21)
 Average accuracy on the training set: 82.342% (± 1.12)
 Average accuracy on the test set: 71.326% (± 0.71)
-
-Without Dropout
-===================================
-PyTorch (seed 0)
-Training completed in 539.248s
-Accuracy on training set: 95.978%
-Accuracy on test set: 69.180%
-
-TensorFlow (seed 0)
-Training completed in 270.492s
-Accuracy on training set: 94.120%
-Accuracy on test set: 69.350%
