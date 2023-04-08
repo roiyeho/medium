@@ -8,7 +8,9 @@ from torch.utils.data import DataLoader, random_split
 from torch import nn
 import time
 
-torch.manual_seed(0)
+torch.manual_seed(4)
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Hyperparameters
 batch_size = 32
@@ -53,6 +55,7 @@ model = nn.Sequential(
     # The final output layer with 10 neurons
     nn.Linear(512, 10)
 )
+model.to(device)
 
 print(model)
 
@@ -60,7 +63,10 @@ print(model)
 def train_loop(model, data_loader, loss_fn, optimizer):  
     size = len(data_loader.dataset)  
 
-    for batch, (X, y) in enumerate(data_loader):       
+    for batch, (X, y) in enumerate(data_loader):  
+        # Place the data on the GPU
+        X, y = X.to(device), y.to(device)
+
         # Compute prediction and loss
         y_pred = model(X)
         loss = loss_fn(y_pred, y)
@@ -80,7 +86,8 @@ def evaluate_model(model, data_loader):
     correct = 0
 
     with torch.no_grad():
-        for X, y in data_loader:
+        for X, y in data_loader:            
+            X, y = X.to(device), y.to(device)
             output = model(X)
             y_pred = output.argmax(1)  
             correct += (y_pred == y).sum().item()

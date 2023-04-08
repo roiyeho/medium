@@ -1,29 +1,29 @@
 PyTorch
 ==================================
 seed 0
-Training completed in 115.190s
-Accuracy on training set: 81.036%
-Accuracy on test set: 72.350%
+Training completed in 589.440s
+Accuracy on training set: 77.251%
+Accuracy on test set: 69.930%
 
 seed 1
-Training completed in 121.344s
-Accuracy on training set: 81.053%
-Accuracy on test set: 71.320%
+Training completed in 584.378s
+Accuracy on training set: 78.969%
+Accuracy on test set: 69.930%
 
 seed 2
-Training completed in 117.768s
-Accuracy on training set: 79.742%
-Accuracy on test set: 70.740%
+Training completed in 575.473s
+Accuracy on training set: 80.549%
+Accuracy on test set: 71.430%
 
 seed 3
-Training completed in 117.075s
-Accuracy on training set: 80.956%
-Accuracy on test set: 71.210%
+Training completed in 604.453s
+Accuracy on training set: 80.518%
+Accuracy on test set: 71.540%
 
 seed 4
-Training completed in 125.322s
-Accuracy on training set: 81.373%
-Accuracy on test set: 70.460%
+Training completed in 577.629s
+Accuracy on training set: 80.664%
+Accuracy on test set: 70.710%
 
 Average training time: 586.275s (± 10.35)
 Average accuracy on the training set: 79.590% (± 1.33)
