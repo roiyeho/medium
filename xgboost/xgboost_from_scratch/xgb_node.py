@@ -1,12 +1,12 @@
 import numpy as np
 
-class Node:
+class XGBNode:
     """A node object that recursively builds itself to construct a regression tree.
     """
     def __init__(self) -> None:
         self.is_leaf: bool = False
-        self.left_child: Node = None
-        self.right_child: Node = None
+        self.left_child: XGBNode = None
+        self.right_child: XGBNode = None
         self.split_feature_idx: int = None
         self.split_threshold: float = None
         self.weight: float = None
@@ -34,14 +34,14 @@ class Node:
             self.split_feature_idx = best_feature_idx
             self.split_threshold = best_threshold
 
-            self.left_child = Node()
+            self.left_child = XGBNode()
             self.left_child.build(X[best_left_samples_idx],
                                 grads[best_left_samples_idx],
                                 hessians[best_left_samples_idx],
                                 curr_depth + 1,
                                 max_depth, min_samples_split, reg_lambda, gamma)
             
-            self.right_child = Node()
+            self.right_child = XGBNode()
             self.right_child.build(X[best_right_samples_idx],
                                 grads[best_right_samples_idx],
                                 hessians[best_right_samples_idx],

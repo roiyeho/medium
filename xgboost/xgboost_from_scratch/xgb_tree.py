@@ -1,11 +1,11 @@
-from node import Node
+from xgb_node import XGBNode
 
-class Tree:
+class XGBTree:
     def __init__(self) -> None:
-        self.root: Node = None
+        self.root: XGBNode = None
 
     def build(self, X, grads, hessians, max_depth, min_samples_split, reg_lambda, gamma):
-        self.root = Node()
+        self.root = XGBNode()
         curr_depth = 0
         self.root.build(X, grads, hessians, curr_depth, max_depth, min_samples_split, reg_lambda, gamma)
 
