@@ -1,14 +1,14 @@
 import time
 
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier, HistGradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
-
 from xgb_classifier import XGBClassifier
 import xgboost
 
-X, y = make_classification(n_samples=500, class_sep=0.5, random_state=0)
+from sklearn.datasets import make_classification
+X, y = make_classification(n_samples=1000, class_sep=0.1, random_state=0)
+
+from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
 def evaluate_model(name, model, X_train, y_train, X_test, y_test):

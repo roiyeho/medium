@@ -97,7 +97,7 @@ class XGBNode:
         return 0.5 * gain
         
     def predict(self, x):
-        """Return the weight of a given sample x
+        """Return the score of a given sample x
         """
         if self.is_leaf:
             return self.weight

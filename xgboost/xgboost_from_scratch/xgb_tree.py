@@ -14,6 +14,6 @@ class XGBTree:
         self.root.build(X, grads, hessians, curr_depth, max_depth, reg_lambda, gamma)
 
     def predict(self, x):
-        """Return the weight of a given sample x
+        """Return the score of a given sample x
         """
         return self.root.predict(x)

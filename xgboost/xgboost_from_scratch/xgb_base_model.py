@@ -27,14 +27,18 @@ class XGBBaseModel(ABC, BaseEstimator):
     def fit(self, X, y):
         """Build an ensemble of trees for the given training set
         """
+        # Get the initial prediction of the ensemble
         self.base_pred = self.get_base_prediction(y)
+        
         self.estimators: List[XGBTree] = []
-
         for i in range(self.n_estimators):
+            # Compute the first and second order gradients of the loss function with respect
+            # to the predictions of the current ensemble
             out = self.get_output_values(X)
             grads = self.calc_gradients(y, out)
             hessians = self.calc_hessians(y, out)
 
+            # Add a new tree to the ensemble
             tree = XGBTree()
             tree.build(X, grads, hessians, self.max_depth, self.reg_lambda, self.gamma)
             self.estimators.append(tree)
