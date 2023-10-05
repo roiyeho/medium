@@ -1,6 +1,6 @@
 import gymnasium as gym
 
-env = gym.make('Taxi-v3', render_mode='human')
+env = gym.make('Taxi-v3', render_mode='ansi')
 
 observation, info = env.reset()
 print(observation)
@@ -17,5 +17,6 @@ print('Truncated:', truncated)
 for i in range(25):
     action = env.action_space.sample()
     observation, reward, terminated, truncated, _ = env.step(action)
+    print(env.render())
     
 env.close()
